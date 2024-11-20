@@ -51,7 +51,7 @@ nav a {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://github.com/Quintero4/portfolio/blob/main/images/fondo.png');
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://github.com/Quintero4/portfolio/main/images/fondo.png');
     background-size: cover;
     color: white;
 }
