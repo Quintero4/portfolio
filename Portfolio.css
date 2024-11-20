@@ -12,7 +12,7 @@ body {
     font-family: var(--main-font);
 }
 body {
-    background-image: url('images/fondo.png');
+    background-image: url('https://raw.githubusercontent.com/Quintero4/portfolio/refs/heads/main/images/fondo.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
