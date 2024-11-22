@@ -12,7 +12,7 @@ body {
     font-family: var(--main-font);
 }
 body {
-    background-image: url('https://github.com/Quintero4/portfolio/blob/main/images/fondo.png');
+    background-image: url('images/fondo.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -20,7 +20,7 @@ body {
     min-height: 100vh;
     margin: 0;
         /* Para asegurar que el texto sea legible sobre la imagen */
-    color: white; /* Ajusta el color del texto según tu imagen */
+    color: rgb(0, 0, 0); /* Ajusta el color del texto según tu imagen */
 }
     
 /* Para mejorar la legibilidad del texto, puedes agregar un overlay oscuro */
@@ -115,3 +115,72 @@ header {
     text-decoration: none; /* Elimina subrayados */
     color: #fff; /* Color blanco para el texto */
 }
+.typewriter {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    white-space: nowrap; /* Evita que el texto haga saltos de línea */
+    overflow: hidden; /* Oculta el texto que aún no ha sido "escrito" */
+    border-right: 2px solid #333; /* Cursor simulando la máquina */
+    animation: blink-caret 0.7s step-end infinite; /* Parpadeo del cursor */
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #333;
+    }
+}
+.about-section {
+    position: relative;
+    padding: 50px 20px;
+    background-image: url(''); /* Cambia el nombre al de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff; /* Color del texto para contraste */
+}
+
+.hover-expand {
+    position: relative;
+    margin: 20px auto;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Borde translúcido */
+    border-radius: 8px;
+    padding: 10px;
+    width: 80%; /* Ajusta el ancho al tamaño deseado */
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro translúcido */
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    max-height: 60px; /* Altura inicial colapsada */
+}
+
+.hover-expand:hover {
+    max-height: 500px; /* Altura expandida */
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.details-content {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.hover-expand:hover .details-content {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.details-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.details-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 10px 0;
+    text-align: justify;
+}
+
