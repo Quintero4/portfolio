@@ -9,33 +9,63 @@
 }
 
 body {
-    font-family: var(--main-font);
-    background-image: url('https://github.com/Quintero4/portfolio/blob/main/images/fondo2.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    margin: 0;
-    color: rgb(0, 0, 0);
-}
-
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-}
 
 header {
     width: 100%;
     background: red;
     padding: 1rem 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Estilo para el contenedor de imágenes de fondo */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/fondo.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    transition: opacity 0.5s ease;
+}
+
+.background-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/fondo2.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Área sensible al hover en el centro */
+.hover-area {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px; /* Ajusta el tamaño del área sensible */
+    height: 200px;
+    z-index: -1;
+}
+
+.hover-area:hover + .background-container .background-hover {
+    opacity: 1;
 }
 
 .navbar {
@@ -147,7 +177,7 @@ header {
 /* Ocultar el texto "¿Quién soy?" al pasar el ratón */
 .hover-expand:hover .static-title {
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;  
 }
 
 /* Contenido expandible */
@@ -236,4 +266,5 @@ footer .social-links a {
     color: #fff; /* Color blanco */
     text-decoration: none; 
     justify-content: center;
+}       
 }
