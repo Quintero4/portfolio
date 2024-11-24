@@ -115,31 +115,6 @@ header {
 }
 
 
-.logo {
-    flex-shrink: 0;
-}
-
-.logo img {
-    height: 50px;
-    width: auto;
-}
-
-.nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li {
-    display: inline-block;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: #fff;
-}
 
 .typewriter {
     font-family: 'Courier New', Courier, monospace;
@@ -236,7 +211,7 @@ header {
 }
 /* Imagen de fondo para el cuadro "¿Quién soy?" */
 .details-content.quien-soy {
-    background-image: url('fondo-soy.jpg');
+    background-image: url('./images/fondo-soy.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -251,7 +226,7 @@ header {
 
 /* Imagen de fondo para el cuadro "Contacto" */
 .details-content.contacto {
-    background-image: url('fondo-contacto.jpg');
+    background-image: url('images/fondo-contacto.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
