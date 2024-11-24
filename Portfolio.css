@@ -185,7 +185,8 @@ header {
     position: relative; /* Posicionamiento relativo para usar correctamente el fondo */
     color: #fff; /* Texto blanco para contraste */
     padding: 20px; /* Espaciado interno */
-    background-size: cover; /* La imagen cubrirá todo el cuadro */
+    background-size: contain; /* La imagen cubrirá todo el cuadro */
+    background-position: center;
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     opacity: 0; /* Oculto inicialmente */
     transform: translateY(-20px); /* Posición inicial antes de la expansión */
@@ -198,7 +199,7 @@ header {
 
 /* Mostrar contenido expandible al pasar el ratón */
 .hover-expand:hover {
-    max-height: 300px;
+    max-height: 400px;
     background: none;
     background-color: transparent;
     opacity: 1; /* Muestra el contenido */
@@ -208,6 +209,8 @@ header {
 .hover-expand:hover .details-content {
     opacity: 1; /* Hace visible el contenido */
     transform: translateY(0); /* Restaura la posición */
+    height: auto;
+    min-height: 250px;
 }
 /* Imagen de fondo para el cuadro "¿Quién soy?" */
 .details-content.quien-soy {
@@ -215,6 +218,8 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    height: 100%;
+    min-height: 250px;
 }
 .hover-expand:hover .details-content.quien-soy h2,
 .hover-expand:hover .details-content.quien-soy p,
@@ -227,9 +232,13 @@ header {
 /* Imagen de fondo para el cuadro "Contacto" */
 .details-content.contacto {
     background-image: url('images/contacto.png');
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    height: 100px;
+    min-height: 250px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 .hover-expand:hover .details-content.contacto h2,
 .hover-expand:hover .details-content.contacto p,
@@ -237,11 +246,15 @@ header {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 50); /* Sombra negra */
     color: #fff; /* Asegúrate de que el texto sea visible */
     transition: text-shadow 0.3s ease, color 0.3s ease; /* Suaviza el cambio */
+    position: relative;
+    z-index: 2;
 }
 
 .hover-expand:hover .details-content {
     opacity: 1; /* Mostrar el contenido */
     transform: translateY(0); /* Restaura la posición */
+    height: auto;
+    min-height: 250px;
 }
 /* Estilo general para el contenedor de la imagen */
 .image-container {
