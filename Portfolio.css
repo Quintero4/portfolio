@@ -373,3 +373,48 @@ footer .social-links a {
     content: "\f2b6"; /* Código del ícono de sobre abierto */
     font-family: "Font Awesome 6 Free";
 }
+/* Estilos para el contenedor de logos */
+.tech-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra verticalmente los íconos */
+    gap: 20px; /* Espacio entre los íconos */
+    margin-bottom: 20px; /* Espacio entre los logos y el contenido del footer */
+}
+
+/* Estilos para los íconos */
+.tech-logos a {
+    font-size: 2rem; /* Tamaño de los íconos */
+    color: inherit; /* Mantiene el color original */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    transition: transform 0.3s ease; /* Solo animación de escala */
+}
+
+/* Estilos para la imagen del logo de TypeScript */
+.tech-logos a img.tech-logo {
+    width: 32px; /* Ajusta el tamaño del logo */
+    height: 32px;
+    transition: transform 0.3s ease; /* Solo animación de escala */
+}
+
+/* Efecto hover para los íconos */
+.tech-logos a:hover {
+    transform: scale(1.2); /* Amplía ligeramente al pasar el mouse */
+}
+
+/* Colores originales para los íconos */
+.tech-logos .fa-html5 {
+    color: #e34c26; /* Color naranja de HTML5 */
+}
+
+.tech-logos .fa-css3-alt {
+    color: #264de4; /* Color azul de CSS3 */
+}
+
+.tech-logos .fa-php {
+    color: #777bb4; /* Color morado de PHP */
+}
+
+.tech-logos img.tech-logo {
+    filter: none; /* Mantiene el color original del logo de TypeScript */
+}
