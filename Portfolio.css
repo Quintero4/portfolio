@@ -377,44 +377,61 @@ footer .social-links a {
 .tech-logos {
     display: flex;
     justify-content: center;
-    align-items: center; /* Centra verticalmente los íconos */
     gap: 20px; /* Espacio entre los íconos */
     margin-bottom: 20px; /* Espacio entre los logos y el contenido del footer */
 }
 
 /* Estilos para los íconos */
-.tech-logos a {
+.tech-logos i {
     font-size: 2rem; /* Tamaño de los íconos */
-    color: inherit; /* Mantiene el color original */
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    transition: transform 0.3s ease; /* Solo animación de escala */
-}
-
-/* Estilos para la imagen del logo de TypeScript */
-.tech-logos a img.tech-logo {
-    width: 32px; /* Ajusta el tamaño del logo */
-    height: 32px;
-    transition: transform 0.3s ease; /* Solo animación de escala */
+    color: #fff; /* Color blanco */
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 /* Efecto hover para los íconos */
-.tech-logos a:hover {
+.tech-logos i:hover {
     transform: scale(1.2); /* Amplía ligeramente al pasar el mouse */
+    color: #007bff; /* Cambia el color al hacer hover */
 }
 
-/* Colores originales para los íconos */
-.tech-logos .fa-html5 {
+/* Colores específicos para cada ícono */
+.tech-logos .fa-html5:hover {
     color: #e34c26; /* Color naranja de HTML5 */
 }
 
-.tech-logos .fa-css3-alt {
+.tech-logos .fa-css3-alt:hover {
     color: #264de4; /* Color azul de CSS3 */
 }
 
-.tech-logos .fa-php {
+.tech-logos .fa-php:hover {
     color: #777bb4; /* Color morado de PHP */
 }
 
-.tech-logos img.tech-logo {
-    filter: none; /* Mantiene el color original del logo de TypeScript */
+.tech-logos .fa-keyboard:hover {
+    color: #ffcc00; /* Color amarillo para TypeText */
+}
+
+.tech-logos .fa-js-square:hover {
+    color: #f0db4f; /* Color amarillo de JavaScript */
+}
+.tech-logos .fa-angular:hover {
+    color: #dd0031; /* Color rojo de Angular */
+}
+.tech-logos .fa-laravel:hover {
+    color: #ff2d20; /* Color rojo de Laravel */ 
+}
+
+.tech-logos .fa-vue:hover {
+    color: #61dafb; /* Color azul de React */
+}
+
+.tech-logos .fa-react:hover {
+    color: #42a6b8; /* Color verde de Vue.js */
+}
+
+.tech-logos .fa-git-alt:hover {
+    color: #f34f29; /* Color naranja de Node.js */
+}
+.tech-logos .fa-node:hover {
+    color: #68a063; /* Color verde de Git */
 }
